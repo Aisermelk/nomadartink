@@ -48,9 +48,11 @@ html {
 body {
     background: var(--bg);
     color: var(--text);
+
     font-family: var(--font-body);
     font-size: 15px;
     line-height: 1.6;
+
     overflow-x: hidden;
 }
 
@@ -130,12 +132,18 @@ button {
     color: var(--text);
 
     font-family: var(--font-display);
-    font-size: clamp(4rem, 7vw, 7.5rem);
+
+    font-size: clamp(
+        3.5rem,
+        6vw,
+        6.5rem
+    );
 
     font-weight: 400;
-    line-height: 0.88;
 
-    letter-spacing: -0.045em;
+    line-height: 0.9;
+
+    letter-spacing: -0.04em;
 }
 
 .section-title em,
@@ -143,6 +151,7 @@ button {
 .manifesto-title em,
 .final-title em {
     color: var(--text-soft);
+
     font-style: italic;
     font-weight: 300;
 }
@@ -151,13 +160,31 @@ button {
     color: var(--text-soft);
 
     font-family: var(--font-body);
+
     font-size: 0.19em;
 
     font-weight: 600;
+
     letter-spacing: 0.22em;
+
     text-transform: uppercase;
 
     vertical-align: middle;
+}
+
+
+/* =========================================================
+   SCROLL MARGIN
+   Evita que o header cubra as seções
+   ========================================================= */
+
+#trabalhos,
+#sobre,
+#estilo,
+#processo,
+#depoimentos,
+#contato {
+    scroll-margin-top: 100px;
 }
 
 
@@ -167,6 +194,7 @@ button {
 
 .site-header {
     position: fixed;
+
     z-index: 1000;
 
     top: 0;
@@ -186,6 +214,7 @@ button {
     border-bottom: 1px solid var(--line-soft);
 
     backdrop-filter: blur(16px);
+
     -webkit-backdrop-filter: blur(16px);
 }
 
@@ -200,13 +229,17 @@ button {
     margin-inline: auto;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
 .brand {
     display: inline-flex;
+
     align-items: baseline;
+
     gap: 7px;
 
     white-space: nowrap;
@@ -216,9 +249,11 @@ button {
     color: var(--text);
 
     font-family: var(--font-body);
+
     font-size: 16px;
 
     font-weight: 800;
+
     letter-spacing: 0.15em;
 }
 
@@ -226,9 +261,11 @@ button {
     color: var(--accent-bright);
 
     font-family: var(--font-display);
+
     font-size: 23px;
 
     font-style: italic;
+
     font-weight: 500;
 
     letter-spacing: 0.03em;
@@ -236,7 +273,9 @@ button {
 
 .main-nav {
     display: flex;
+
     align-items: center;
+
     gap: 34px;
 }
 
@@ -246,9 +285,11 @@ button {
     color: var(--text-muted);
 
     font-size: 10px;
+
     font-weight: 700;
 
     letter-spacing: 0.18em;
+
     text-transform: uppercase;
 
     transition: color var(--transition);
@@ -260,9 +301,11 @@ button {
     position: absolute;
 
     left: 0;
+
     bottom: -7px;
 
     width: 0;
+
     height: 1px;
 
     background: var(--accent-bright);
@@ -296,7 +339,9 @@ button {
 
 .main-nav .nav-cta:hover {
     background: var(--text);
+
     border-color: var(--text);
+
     color: var(--bg);
 }
 
@@ -309,6 +354,7 @@ button {
     display: none;
 
     width: 42px;
+
     height: 42px;
 
     position: relative;
@@ -324,6 +370,7 @@ button {
     left: 8px;
 
     width: 26px;
+
     height: 1px;
 
     background: var(--text);
@@ -343,11 +390,13 @@ button {
 
 .menu-toggle.active span:first-child {
     top: 21px;
+
     transform: rotate(45deg);
 }
 
 .menu-toggle.active span:last-child {
     top: 21px;
+
     transform: rotate(-45deg);
 }
 
@@ -362,6 +411,7 @@ button {
     min-height: 100svh;
 
     display: flex;
+
     align-items: center;
 
     overflow: hidden;
@@ -371,6 +421,7 @@ button {
 
 .hero-background {
     position: absolute;
+
     inset: 0;
 
     background:
@@ -391,6 +442,7 @@ button {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
@@ -406,6 +458,7 @@ button {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     opacity: 0.15;
@@ -423,15 +476,17 @@ button {
 
     background-size: 80px 80px;
 
-    mask-image: linear-gradient(
-        to bottom,
-        black,
-        transparent 80%
-    );
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 80%
+        );
 }
 
 .hero-gradient {
     position: absolute;
+
     inset: 0;
 
     background:
@@ -444,6 +499,7 @@ button {
 
 .hero-content {
     position: relative;
+
     z-index: 2;
 
     width: min(
@@ -462,29 +518,30 @@ button {
     color: var(--accent-bright);
 
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 0.42em;
 }
 
 .hero-title {
-    max-width: 950px;
+    max-width: 850px;
 
     color: var(--text);
 
     font-family: var(--font-display);
 
     font-size: clamp(
-        5rem,
-        11vw,
-        11.5rem
+        4.5rem,
+        9vw,
+        9.5rem
     );
 
     font-weight: 400;
 
-    line-height: 0.77;
+    line-height: 0.82;
 
-    letter-spacing: -0.055em;
+    letter-spacing: -0.045em;
 }
 
 .hero-title em {
@@ -497,6 +554,7 @@ button {
     color: var(--text-muted);
 
     font-size: 10px;
+
     font-weight: 700;
 
     letter-spacing: 0.25em;
@@ -504,6 +562,7 @@ button {
 
 .hero-actions {
     display: flex;
+
     gap: 12px;
 
     margin-top: 42px;
@@ -513,15 +572,19 @@ button {
     min-height: 50px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     padding: 0 25px;
 
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 0.18em;
+
     text-transform: uppercase;
 
     transition:
@@ -537,11 +600,13 @@ button {
 
 .btn-primary {
     background: var(--text);
+
     color: var(--bg);
 }
 
 .btn-primary:hover {
     background: var(--accent-bright);
+
     color: var(--text);
 }
 
@@ -553,14 +618,17 @@ button {
 
 .btn-outline:hover {
     background: rgba(255, 255, 255, 0.05);
+
     border-color: rgba(255, 255, 255, 0.28);
 }
 
 .hero-bottom {
     position: absolute;
+
     z-index: 3;
 
     left: 50%;
+
     bottom: 30px;
 
     width: min(
@@ -571,11 +639,13 @@ button {
     transform: translateX(-50%);
 
     display: flex;
+
     justify-content: space-between;
 
     color: var(--text-faint);
 
     font-size: 9px;
+
     font-weight: 700;
 
     letter-spacing: 0.25em;
@@ -590,6 +660,7 @@ button {
     min-height: 80vh;
 
     display: flex;
+
     align-items: center;
 
     background: var(--bg-soft);
@@ -607,6 +678,7 @@ button {
     color: var(--accent-bright);
 
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 0.3em;
@@ -618,16 +690,16 @@ button {
     font-family: var(--font-display);
 
     font-size: clamp(
-        4rem,
-        8vw,
-        9rem
+        3.5rem,
+        7vw,
+        7.5rem
     );
 
     font-weight: 400;
 
-    line-height: 0.84;
+    line-height: 0.88;
 
-    letter-spacing: -0.05em;
+    letter-spacing: -0.045em;
 }
 
 .manifesto-text {
@@ -677,6 +749,7 @@ button {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
@@ -689,10 +762,13 @@ button {
 
 .image-placeholder {
     position: absolute;
+
     inset: 0;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     color: var(--text-faint);
@@ -710,6 +786,7 @@ button {
 
 .about-line {
     width: 70px;
+
     height: 1px;
 
     margin: 38px 0;
@@ -737,7 +814,9 @@ button {
 
 .about-tags {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 8px;
 
     margin-top: 38px;
@@ -751,6 +830,7 @@ button {
     border: 1px solid var(--line-soft);
 
     font-size: 8px;
+
     font-weight: 700;
 
     letter-spacing: 0.16em;
@@ -767,7 +847,9 @@ button {
 
 .styles-header {
     display: flex;
+
     align-items: flex-end;
+
     justify-content: space-between;
 
     gap: 60px;
@@ -792,7 +874,10 @@ button {
 .style-item {
     display: grid;
 
-    grid-template-columns: 100px 1fr 60px;
+    grid-template-columns:
+        100px
+        1fr
+        60px;
 
     align-items: center;
 
@@ -809,6 +894,7 @@ button {
 
 .style-item:hover {
     padding-left: 20px;
+
     padding-right: 20px;
 
     background: rgba(255, 255, 255, 0.018);
@@ -818,6 +904,7 @@ button {
     color: var(--text-faint);
 
     font-size: 10px;
+
     font-weight: 700;
 
     letter-spacing: 0.16em;
@@ -830,8 +917,8 @@ button {
 
     font-size: clamp(
         2rem,
-        4vw,
-        4rem
+        3.5vw,
+        3.6rem
     );
 
     font-weight: 400;
@@ -876,7 +963,9 @@ button {
 
 .portfolio-header {
     display: flex;
+
     align-items: flex-end;
+
     justify-content: space-between;
 
     gap: 60px;
@@ -888,6 +977,7 @@ button {
     color: var(--text-muted);
 
     font-size: 9px;
+
     font-weight: 700;
 
     letter-spacing: 0.25em;
@@ -904,6 +994,7 @@ button {
 
 .gallery-grid img {
     width: 100%;
+
     height: 100%;
 
     min-height: 360px;
@@ -922,6 +1013,7 @@ button {
 
 .gallery-grid img.image-loaded {
     opacity: 1;
+
     transform: scale(1);
 }
 
@@ -929,32 +1021,33 @@ button {
     filter: brightness(1.08);
 }
 
-/*
-   Asymmetric gallery
-*/
-
 .gallery-grid img:nth-child(1) {
     grid-column: span 7;
+
     min-height: 620px;
 }
 
 .gallery-grid img:nth-child(2) {
     grid-column: span 5;
+
     min-height: 420px;
 }
 
 .gallery-grid img:nth-child(3) {
     grid-column: span 5;
+
     min-height: 520px;
 }
 
 .gallery-grid img:nth-child(4) {
     grid-column: span 7;
+
     min-height: 620px;
 }
 
 .gallery-grid img:nth-child(n + 5) {
     grid-column: span 4;
+
     min-height: 400px;
 }
 
@@ -978,7 +1071,9 @@ button {
 .process-item {
     display: grid;
 
-    grid-template-columns: 100px 1fr;
+    grid-template-columns:
+        100px
+        1fr;
 
     gap: 30px;
 
@@ -1001,6 +1096,7 @@ button {
     color: var(--text-faint);
 
     font-size: 10px;
+
     font-weight: 700;
 
     letter-spacing: 0.16em;
@@ -1011,7 +1107,7 @@ button {
 
     font-family: var(--font-display);
 
-    font-size: 38px;
+    font-size: 34px;
 
     font-weight: 400;
 
@@ -1037,7 +1133,9 @@ button {
 
 .reviews-header {
     display: flex;
+
     align-items: flex-end;
+
     justify-content: space-between;
 
     gap: 50px;
@@ -1053,7 +1151,9 @@ button {
 
 .v8-reviews-summary {
     display: flex;
+
     align-items: center;
+
     gap: 15px;
 
     margin-bottom: 45px;
@@ -1122,6 +1222,7 @@ button {
     color: var(--text);
 
     font-size: 11px;
+
     font-weight: 700;
 
     letter-spacing: 0.08em;
@@ -1144,7 +1245,7 @@ button {
 
     font-family: var(--font-display);
 
-    font-size: 20px;
+    font-size: 19px;
 
     line-height: 1.35;
 }
@@ -1180,6 +1281,10 @@ button {
     align-items: start;
 }
 
+.contact-content {
+    max-width: 550px;
+}
+
 .contact-lead {
     margin-top: 40px;
 
@@ -1187,13 +1292,14 @@ button {
 
     font-family: var(--font-display);
 
-    font-size: 28px;
+    font-size: 27px;
 
     line-height: 1.15;
 }
 
 .contact-links {
     display: flex;
+
     flex-direction: column;
 
     align-items: flex-start;
@@ -1209,6 +1315,7 @@ button {
     color: var(--text-muted);
 
     font-size: 10px;
+
     font-weight: 700;
 
     letter-spacing: 0.15em;
@@ -1224,9 +1331,11 @@ button {
     position: absolute;
 
     left: 0;
+
     bottom: -5px;
 
     width: 0;
+
     height: 1px;
 
     background: var(--accent-bright);
@@ -1252,6 +1361,7 @@ button {
 
 .contact-form {
     display: flex;
+
     flex-direction: column;
 
     gap: 28px;
@@ -1259,6 +1369,7 @@ button {
 
 .form-group {
     display: flex;
+
     flex-direction: column;
 
     gap: 9px;
@@ -1268,9 +1379,11 @@ button {
     color: var(--text-muted);
 
     font-size: 9px;
+
     font-weight: 700;
 
     letter-spacing: 0.18em;
+
     text-transform: uppercase;
 }
 
@@ -1285,6 +1398,7 @@ button {
     color: var(--text);
 
     border: 0;
+
     border-bottom: 1px solid var(--line);
 
     outline: none;
@@ -1322,7 +1436,9 @@ button {
     min-height: 75vh;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     background:
@@ -1344,6 +1460,7 @@ button {
     color: var(--accent-bright);
 
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 0.32em;
@@ -1355,16 +1472,16 @@ button {
     font-family: var(--font-display);
 
     font-size: clamp(
-        4rem,
-        9vw,
-        10rem
+        3.5rem,
+        8vw,
+        8.5rem
     );
 
     font-weight: 400;
 
-    line-height: 0.8;
+    line-height: 0.84;
 
-    letter-spacing: -0.05em;
+    letter-spacing: -0.045em;
 }
 
 .final-cta .btn {
@@ -1386,7 +1503,9 @@ button {
 
 .footer-top {
     display: flex;
+
     align-items: flex-start;
+
     justify-content: space-between;
 
     gap: 50px;
@@ -1414,6 +1533,7 @@ button {
     color: var(--text-muted);
 
     font-size: 9px;
+
     font-weight: 700;
 
     letter-spacing: 0.14em;
@@ -1429,6 +1549,7 @@ button {
 
 .footer-bottom {
     display: flex;
+
     justify-content: space-between;
 
     padding-top: 25px;
@@ -1451,19 +1572,25 @@ button {
 
 .whatsapp-float {
     position: fixed;
+
     z-index: 900;
 
     right: 28px;
+
     bottom: 28px;
 
     width: 54px;
+
     height: 54px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     background: var(--text);
+
     color: var(--bg);
 
     border-radius: 50%;
@@ -1479,6 +1606,7 @@ button {
 
 .whatsapp-float:hover {
     background: var(--accent-bright);
+
     color: var(--text);
 
     transform: translateY(-4px);
@@ -1486,6 +1614,7 @@ button {
 
 .whatsapp-float svg {
     width: 22px;
+
     height: 22px;
 
     fill: currentColor;
@@ -1606,17 +1735,21 @@ button {
         position: fixed;
 
         top: 76px;
+
         left: 0;
 
         width: 100%;
+
         height: calc(100svh - 76px);
 
         padding: 45px 25px;
 
         display: flex;
+
         flex-direction: column;
 
         align-items: flex-start;
+
         justify-content: flex-start;
 
         gap: 25px;
@@ -1626,6 +1759,7 @@ button {
         border-top: 1px solid var(--line-soft);
 
         opacity: 0;
+
         visibility: hidden;
 
         transform: translateY(-10px);
@@ -1638,6 +1772,7 @@ button {
 
     .main-nav.open {
         opacity: 1;
+
         visibility: visible;
 
         transform: translateY(0);
@@ -1653,9 +1788,9 @@ button {
 
     .hero-title {
         font-size: clamp(
-            4.5rem,
-            14vw,
-            8rem
+            4rem,
+            12vw,
+            7.5rem
         );
     }
 
@@ -1675,6 +1810,7 @@ button {
     .portfolio-header,
     .reviews-header {
         align-items: flex-start;
+
         flex-direction: column;
     }
 
@@ -1735,12 +1871,12 @@ button {
 
     .hero-title {
         font-size: clamp(
-            4rem,
-            19vw,
-            6.5rem
+            3.5rem,
+            17vw,
+            5.8rem
         );
 
-        line-height: 0.8;
+        line-height: 0.82;
     }
 
     .hero-subtitle {
@@ -1775,17 +1911,17 @@ button {
 
     .manifesto-title {
         font-size: clamp(
-            3.7rem,
-            18vw,
-            6rem
+            3.3rem,
+            16vw,
+            5.7rem
         );
     }
 
     .section-title {
         font-size: clamp(
-            3.7rem,
-            17vw,
-            6rem
+            3.2rem,
+            15vw,
+            5.5rem
         );
     }
 
@@ -1798,7 +1934,10 @@ button {
     }
 
     .style-item {
-        grid-template-columns: 45px 1fr 25px;
+        grid-template-columns:
+            45px
+            1fr
+            25px;
 
         gap: 12px;
 
@@ -1807,6 +1946,7 @@ button {
 
     .style-item:hover {
         padding-left: 10px;
+
         padding-right: 10px;
     }
 
@@ -1837,7 +1977,9 @@ button {
     }
 
     .process-item {
-        grid-template-columns: 45px 1fr;
+        grid-template-columns:
+            45px
+            1fr;
 
         gap: 12px;
     }
@@ -1878,9 +2020,9 @@ button {
 
     .final-title {
         font-size: clamp(
-            3.8rem,
-            17vw,
-            6rem
+            3.3rem,
+            16vw,
+            5.7rem
         );
     }
 
@@ -1900,9 +2042,11 @@ button {
 
     .whatsapp-float {
         right: 18px;
+
         bottom: 18px;
 
         width: 50px;
+
         height: 50px;
     }
 }
@@ -1922,18 +2066,23 @@ button {
     *::before,
     *::after {
         animation-duration: 0.01ms !important;
+
         animation-iteration-count: 1 !important;
+
         transition-duration: 0.01ms !important;
+
         scroll-behavior: auto !important;
     }
 
     .reveal {
         opacity: 1;
+
         transform: none;
     }
 
     .gallery-grid img {
         opacity: 1;
+
         transform: none;
     }
 }
